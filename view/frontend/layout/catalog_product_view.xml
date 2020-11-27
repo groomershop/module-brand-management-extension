@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <container name="product.info.main.section.brand" htmlTag="div" htmlClass="cs-buybox__section cs-buybox__section--brand" after="product.info.main.section.extras">
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.view.brand-button" template="Groomershop_BrandManagement::product/brand-button.phtml" after="-">
+                    <arguments>
+                        <argument name="view_model" xsi:type="object">Groomershop\BrandManagement\ViewModel\BrandRenderer</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

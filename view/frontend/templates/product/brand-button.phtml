@@ -1,0 +1,34 @@
+<?php
+/**
+ * @var \Magento\Catalog\Block\Product\View\Description $block
+ * @var \Groomershop\BrandManagement\ViewModel\BrandRenderer $viewModel
+ */
+$viewModel = $block->getViewModel();
+$product = $block->getProduct();
+$brandId = $product->getData('brand');
+if (!$brandId) {
+    return;
+}
+
+$brandName = $product->getAttributeText('brand');
+$brand = $viewModel->getBrandById($brandId);
+$brandUrl = $brand->getBrandUrl();
+$brandIconUrl = $brand->getBrandIconUrl();
+$hasBrandIcon = !empty($brandIconUrl);
+?>
+
+<div class="cs-buybox-brand-button cs-buybox-brand-button--<?= $hasBrandIcon ? "image" : "text" ?>">
+    <div class="cs-buybox-brand-button__label">
+        <?= __('Brand') ?>:
+    </div>
+
+    <?php if ($hasBrandIcon): ?>
+        <a class="cs-buybox-brand-button__link" href="<?= $block->escapeUrl($brand->getBrandUrl()) ?>">
+            <img class="cs-buybox-brand-button__image" src="<?= $block->escapeUrl($brand->getBrandIconUrl()) ?>" alt="<?= $block->escapeHtmlAttr($brand->getBrandName()) ?>">
+        </a>
+    <?php else: ?>
+        <a class="cs-buybox-brand-button__link" href="<?= $block->escapeUrl($brand->getBrandUrl()) ?>">
+            <?= $block->escapeHtml($brand->getBrandName()) ?>
+        </a>
+    <?php endif; ?>
+</div>
