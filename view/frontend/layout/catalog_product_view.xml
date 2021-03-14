@@ -3,9 +3,9 @@
     <body>
         <referenceContainer name="product.info.main">
             <container name="product.info.main.section.brand" htmlTag="div" htmlClass="cs-buybox__section cs-buybox__section--brand" after="product.info.main.section.extras">
-                <block class="Magento\Catalog\Block\Product\View\Description" name="product.view.brand-button" template="Groomershop_BrandManagement::product/brand-button.phtml" after="-">
+                <block class="Magento\Catalog\Block\Product\View\Description" name="product.view.brand-button" template="Groomershop_BrandManagementExtension::product/brand-button.phtml" after="-">
                     <arguments>
-                        <argument name="view_model" xsi:type="object">Groomershop\BrandManagement\ViewModel\BrandRenderer</argument>
+                        <argument name="view_model" xsi:type="object">Groomershop\BrandManagementExtension\ViewModel\BrandRenderer</argument>
                     </arguments>
                 </block>
             </container>

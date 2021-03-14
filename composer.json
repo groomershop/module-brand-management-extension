@@ -1,5 +1,5 @@
 {
-  "name": "groomershop/module-brand-management",
+  "name": "groomershop/module-brand-management-extension",
   "description": "Brand Management extension",
   "type": "magento2-module",
   "homepage": "https://creativestyle.de",
@@ -9,7 +9,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Groomershop\\BrandManagement\\": ""
+      "Groomershop\\BrandManagementExtension\\": ""
     }
   }
 }

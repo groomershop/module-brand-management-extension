@@ -1,5 +1,5 @@
 <?php
-namespace Groomershop\BrandManagement\ViewModel;
+namespace Groomershop\BrandManagementExtension\ViewModel;
 
 class BrandRenderer implements \Magento\Framework\View\Element\Block\ArgumentInterface
 {
